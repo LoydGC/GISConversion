@@ -14,6 +14,7 @@ library(rio)
 # Read in the CSV data and store it in a variable 
 origAddress <- read.csv("XXXX Locations - Sheet1.csv")
 
+#Split address so ZIP and rest of address are separate variablesa
 origAddress <- tidyr::extract(origAddress, Address, c("Address", "Zip"), 
                regex = "(.+) (\\w+)")
 
